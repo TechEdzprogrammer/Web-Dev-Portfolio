@@ -607,6 +607,16 @@ input[type=text], select textarea{
     translate: 0 2px;
 }
 
+@media only screen and (max-width:600px) {
+    .soc-med-accounts img{
+        width: 60%;
+    }
+
+    .soc-med-container{
+        width: 60%;
+    }
+}
+
 
 
 /*footer element styles end*/
