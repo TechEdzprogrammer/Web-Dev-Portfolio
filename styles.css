@@ -133,8 +133,8 @@ header{
 
 .hero-section{
     display: grid;
-    grid-template-rows: 20% 20%;
-    height: 60vh;
+    grid-template-rows: 15% 40% 15%;
+    height: 50vh;
     justify-content: center;
     align-items: center;
     background: linear-gradient(180deg, #eaf0f3, rgb(179, 179, 208));
@@ -150,10 +150,30 @@ header{
 
 .short-description{
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding:0 2% 0 2%;
     font: normal 400 20pt "Sour Gummy", sans-serif;
     font-variation-settings:"wdth" 100;
     color: #343131;
+}
+
+.short-description-button{
+    font: normal 400 25pt "Sour Gummy", sans-serif;
+    background-color: rgb(250, 193, 47);
+    border-radius: 10%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.short-description-button:hover{
+    translate: 0 -5px;
+    background-color:chartreuse;
+}
+
+.explore-button-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 /*media queries for hero section * breakpoints are copied from W3Schools/
@@ -165,21 +185,27 @@ header{
     }
 
     .short-description{
-        font: normal 400 20pt "Sour Gummy", sans-serif;
-        text-align: center;
+        font: normal 400 12pt "Sour Gummy", sans-serif;
+        padding-top:3%;
     }
 
     .hero-section{
-        height: 40vh;
+        height: max-content;
         padding-top: 20%;
     }
 
-}
+    .short-description-button{
+        font: normal 400 15pt "Sour Gummy", sans-serif;
+    }
 
-@media only screen and (min-width: 762px) and (max-width:1024px){
+    .explore-button-container{
+        display: none;
+    }
+}
+@media only screen and (min-width: 768px){
     .hero-section{
-        height: 30vh;
-        grid-template-rows: 30% 30%;
+        height: max-content;
+        padding-top: 10%;
     }
 }
 
@@ -254,25 +280,31 @@ header{
 
     .supporting-photo-container{
         justify-content: center;
+        width: 90%;
     }
 
     .supporting-section-description{
         font: normal 400 10pt "Sour Gummy", sans-serif;
         text-align: justify;
         padding: 0;
+        width: 90%;
     }
 
     .supporting-description-button{
         font: normal 400 15pt "Sour Gummy", sans-serif;
-        
     }
 
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1300px) {
     .supporting-photo-container{
         justify-content: center;
+    }
+
+    .supporting-section-description{
+        text-align: justify;
+        font: normal 400 15pt "Sour Gummy", sans-serif;
     }
 }
 
