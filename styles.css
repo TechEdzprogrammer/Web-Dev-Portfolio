@@ -191,6 +191,7 @@ header{
     padding: 2% 0 2%;
     align-items: center;
     background: #226e9b;
+    gap:2%;
 }
 
 .supporting-section-description, .supporting-section-photo{
@@ -206,17 +207,34 @@ header{
     font: normal 400 20pt "Sour Gummy", sans-serif;
     font-variation-settings:"wdth" 100;
     color: #eaf0f3;
+    padding: 0 2% 0 2%;
 }
 
 .supporting-photo-container{
     display: flex;
     justify-content: flex-end;
-
 }
 
 .supporting-section-photo{
-    width: 82%;
+    width: 100%;
+    height: 30em;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.supporting-description-button{
+    font: normal 400 25pt "Sour Gummy", sans-serif;
+    background-color: rgb(250, 193, 47);
+    border-radius: 10%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.supporting-description-button:hover{
+    translate: 0 -5px;
+    background-color:chartreuse;
+}
+
+.supporting-tech-stacks{
+    color:#f8b966;
 }
 
 /*media queries for supporting section * breakpoints are copied from W3Schools/
@@ -226,10 +244,12 @@ header{
     .supporting-section{
         flex-wrap: wrap;
         text-align: left;
+        flex-direction: column-reverse;
     }
 
     .supporting-section-photo{
-        width: 60%;
+        width:100%;
+        height: 15em;
     }
 
     .supporting-photo-container{
@@ -237,7 +257,14 @@ header{
     }
 
     .supporting-section-description{
+        font: normal 400 10pt "Sour Gummy", sans-serif;
+        text-align: justify;
+        padding: 0;
+    }
+
+    .supporting-description-button{
         font: normal 400 15pt "Sour Gummy", sans-serif;
+        
     }
 
 }
@@ -439,7 +466,7 @@ header{
     justify-content: center;
     align-items: center;
     margin-bottom: 5%;
-    padding: 2% 0 2% 0;
+    padding: 2.4% 2% 2% 2.4%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -451,12 +478,12 @@ header{
     width: 90%;
 }
 
-.proj-titles{
+.project-titles{
     font: normal 200 20pt "Anton SC", sans-serif;
     color: #343131; 
 }
 
-.proj-description{
+.project-description{
     font: normal 400 15pt "Sour Gummy", sans-serif;
     text-align: center;
 }
@@ -480,15 +507,14 @@ header{
 /*media queries for project section * breakpoints are copied from W3Schools/
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    
+@media only screen and (max-width: 600px) { 
     .project{
         width: 80%;
     }
+    .project-link-btn button{
+        font: normal 400 15pt "Sour Gummy", sans-serif;
+    }
 }
-
-
-
 
 .headings{
     font: normal 400 40pt "Anton SC", sans-serif;
@@ -655,7 +681,7 @@ input[type=text], select textarea{
 }
 
 .soc-med-accounts img{
-    width: 40%;
+    width: 25%;
 }
 
 .soc-med-accounts img:hover{
@@ -664,7 +690,7 @@ input[type=text], select textarea{
 
 @media only screen and (max-width:600px) {
     .soc-med-accounts img{
-        width: 60%;
+        width: 40%;
     }
 
     .soc-med-container{
