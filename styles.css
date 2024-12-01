@@ -3,9 +3,11 @@ header *{
     box-sizing: border-box;
     color:#eaf0f3;
 }
+
 header{
     position: relative;  
 }
+
 .nav {
     height: 50px;
     width: 100%;
@@ -32,7 +34,8 @@ header{
 
 .nav-logo > img{
     height: 70%;
-} 
+}
+
 .nav > .nav-header {
     display: inline;
 }
@@ -72,7 +75,6 @@ header{
 }
   
 @media (max-width:600px) {
-
     .nav > .nav-btn {
       display: inline-block;
       position: absolute;
@@ -126,11 +128,9 @@ header{
     }
 
 }
-
 /*header element styles end*/
 
 /*main element styles start*/
-
 .hero-section{
     display: grid;
     grid-template-rows: 15% 40% 15%;
@@ -153,7 +153,7 @@ header{
     flex-wrap: wrap;
     text-align: center;
     padding:0 2% 0 2%;
-    font: normal 400 20pt "Sour Gummy", sans-serif;
+    font: normal 400 25pt "Sour Gummy", sans-serif;
     font-variation-settings:"wdth" 100;
     color: #343131;
 }
@@ -177,7 +177,6 @@ header{
 }
 
 /*media queries for hero section * breakpoints are copied from W3Schools/
-
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .main-intro{
@@ -201,6 +200,7 @@ header{
     .explore-button-container{
         display: none;
     }
+    
 }
 @media only screen and (min-width: 768px){
     .hero-section{
@@ -264,7 +264,6 @@ header{
 }
 
 /*media queries for supporting section * breakpoints are copied from W3Schools/
-
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .supporting-section{
@@ -311,11 +310,11 @@ header{
 .skills{
     height: 100vh;
     padding-top: 2%;
-    background: #e6ebec;
+    background: #f1f7f8;
 }
 
 .skill-container{
-    height: 70%;
+    height: 80%;
     display: flex;
     flex-wrap: wrap;
     gap: 2%;
@@ -323,18 +322,25 @@ header{
 }
 
 .skill-container img{
-    width: 25%;
+    width: 20%;
 }
 
 .skill-set{
-    border: solid 3px #343131;
-    border-radius: 2%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    height: 80%;
     width: 30%;
-    background: #edf0f1;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(55, 50, 50, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: #c0e9f5;
+    padding-bottom: 2%;
 }
 
+.skill-description{
+    font: normal 400 15pt "Sour Gummy", sans-serif;
+    padding: 0 2% 0 2%;
+    text-align: center;
+}
 
 .skill-set:hover{
     background-color: aqua;
@@ -349,7 +355,7 @@ header{
     height: 40%;
     display: flex;
     flex-wrap: wrap;
-    gap:3%;
+    gap:5%;
     justify-content: center;
     align-items: center;
 }
@@ -358,124 +364,58 @@ header{
     font: normal 400 2em "Anton SC", sans-serif;
     text-align: center;
     color: #343131; 
+    margin-bottom:10px;
 }
 
-.skill-level{
-    width: 50%;
-    height: max-content;
-    background: #bdc4c7;
-    font: normal 400 20pt "Sour Gummy", sans-serif;
-    text-align: center;
-    border-radius: 5%;
-    border: #7e898d solid 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.web-dev,.game-dev,.data-sci{
+    padding-bottom: 2%;
 }
 
+.game-dev img,.data-sci img{
+    width: 25%;
+}
 
-/*media queries for skills section * breakpoints are copied from W3Schools/
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    
-    .skills{
-        height: 150vh;
-
-    }
-    .skill-header{
-        font: normal 400 15pt "Anton SC", sans-serif;
-    }
-
-    .skill-container{
-        height: 40%;
-        flex-wrap: wrap;
-        gap: 5%;
-    }
-
+@media only screen and (max-width: 667px){
     .skill-set{
-        width: 40%;
-        padding-bottom: 0;
+        width: 90%;
+        margin-bottom: 5%;
+    }
+    .skills{
+        height: max-content;
+        padding-bottom: 5%;
+    }
+    .skill-container img{
+        width: 15%;
+    }
+
+    .skill-description{
+        font: normal 400 12pt "Sour Gummy", sans-serif;
+    }
+
+    .game-dev img,.data-sci img{
+        width: 20%;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .skill-set{
+        width: 70%;
+        margin-bottom: 5%;
+    }
+    .skills{
+        height: max-content;
+        padding-bottom: 5%;
+    }
+
+    .skill-description{
+        font: normal 400 12pt "Sour Gummy", sans-serif;
     }
 
     .skill-container img{
-        width: 30%;
+        width: 15%;
     }
-
-    .game-dev img, .data-sci img{
-        width: 50%;
-    }
-
-    .web-dev img{
-        width: 35%;
-    }
-
-}
-
-
-/* Medium devices (landscape tablets, 768px and up) */
-
-@media only screen and (min-width: 650px) and (max-width: 1024px) {
-    .skill-set{
-        height: 80%;
-    }
-
-    .skills{
-        height: 100vh;
-    }
-
-    .skill-header{
-        font: normal 400 15pt "Anton SC", sans-serif;
-    }
-
-    .skill-container{
-        height: 40%;
-        flex-wrap: wrap;
-        gap: 5%;
-    }
-
-    .game-dev img, .data-sci img{
-        width: 50%;
-    }
-
-    .web-dev img{
-        width: 25%;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    .skill-set{
-        height: 80%;
-    }
-
-    .skills{
-        height: 90vh;
-    }
-
-    .skill-header{
-        font: normal 400 15pt "Anton SC", sans-serif;
-    }
-
-    .skill-container{
-        height: 40%;
-        flex-wrap: wrap;
-        gap: 5%;
-    }
-
-    .game-dev img, .data-sci img{
-        width: 50%;
-    }
-
-    .web-dev img{
-        width: 35%;
-    }
-}
-
-@media only screen and (min-width: 300px) and (max-width:390px){
-    .game-dev img, .data-sci img{
-        width: 35%;
-    }
-
-    .web-dev img{
-        width: 25%;
+    .game-dev img,.data-sci img{
+        width: 20%;
     }
 }
 
@@ -537,7 +477,6 @@ header{
 }
 
 /*media queries for project section * breakpoints are copied from W3Schools/
-
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) { 
     .project{
@@ -581,7 +520,6 @@ header{
 }
 
 /*media queries for resume section * breakpoints are copied from W3Schools/
-
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .resume-btn{
@@ -593,16 +531,9 @@ header{
     }
     
 }
-
 /*main element styles end*/
 
-
-
-
-
-
 /*footer element styles start*/
-
 .contact{
     padding: 3% 0 3% 0;
     height: 80vh;
@@ -637,7 +568,7 @@ input[type=text], select textarea{
     box-sizing: border-box;
   }
   
-  input[type=submit] {
+input[type=submit] {
     width: 20%;
     background-color: #4CAF50;
     color: white;
@@ -652,7 +583,6 @@ input[type=text], select textarea{
     background-color: #45a049;
   }
 
-
 .contact label, .contact-header{
     font: normal 600 20pt "Sour Gummy", sans-serif;
     color: #edf0f1;
@@ -661,9 +591,7 @@ input[type=text], select textarea{
 .contact-header{
     text-align: center;
 }
-
 /*media queries for contact me section * breakpoints are copied from W3Schools/
-
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
       textarea {	
@@ -732,31 +660,12 @@ input[type=text], select textarea{
 /*footer element styles end*/
 /*Attributions
 <a href="https://www.flaticon.com/free-icons/unity" title="unity icons">Unity icons created by Freepik - Flaticon</a>
-
-
 <a href="https://www.flaticon.com/free-icons/c-sharp" title="c sharp icons">C sharp icons created by Freepik - Flaticon</a>
-
-
 <a href="https://www.flaticon.com/free-icons/html" title="html icons">Html icons created by Pixel perfect - Flaticon</a>
-
 <a href="https://www.flaticon.com/free-icons/css-3" title="css 3 icons">Css 3 icons created by Freepik - Flaticon</a>
-
 <a href="https://www.flaticon.com/free-icons/javascript" title="javascript icons">Javascript icons created by Freepik - Flaticon</a>
-
 <a href="https://www.flaticon.com/free-icons/php" title="php icons">Php icons created by Freepik - Flaticon</a>
-
 <a href="https://www.flaticon.com/free-icons/mysql" title="mysql icons">Mysql icons created by Freepik - Flaticon</a>
-
 <a href="https://www.flaticon.com/free-icons/data-science" title="data science icons">Data science icons created by Flat Icons - Flaticon</a>
-
 <a href="https://www.flaticon.com/free-icons/python" title="python icons">Python icons created by Freepik - Flaticon</a>
 
-
-
-
-<a href="https://www.flaticon.com/free-icons/facebook" title="facebook icons">Facebook icons created by Freepik - Flaticon</a>
-<a href="https://www.flaticon.com/free-icons/youtube" title="youtube icons">Youtube icons created by Freepik - Flaticon</a>
-<a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by riajulislam - Flaticon</a>
-<a href="https://www.flaticon.com/free-icons/gitlab" title="gitlab icons">Gitlab icons created by Freepik - Flaticon</a>
-<a href="https://www.flaticon.com/free-icons/github" title="github icons">Github icons created by Pixel perfect - Flaticon</a>
-*/
