@@ -251,6 +251,24 @@ header{
     width: 50%;
 }
 
+@keyframes support-sect {
+    0%{
+        transform: translate(-40px,0px);
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
+}
+
+@keyframes support-photo {
+    0%{
+        transform: translate(30px,0px);
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
+}
+
 .supporting-section-description{
     display: flex;
     justify-content: center;
@@ -263,9 +281,18 @@ header{
     padding: 0 2% 0 2%;
 }
 
+.support-animate{
+    animation: support-sect 3s;
+}
+
+.photo-animate{
+    animation: support-photo 3s;
+}
+
 .supporting-photo-container{
     display: flex;
     justify-content: flex-end;
+    
 }
 
 .supporting-section-photo{
