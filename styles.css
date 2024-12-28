@@ -135,10 +135,34 @@ header{
     display: grid;
     grid-template-rows: 15% 40% 15%;
     height: 50vh;
-    justify-content: center;
     align-items: center;
     background: linear-gradient(180deg, #eaf0f3, rgb(179, 179, 208));
     padding-top: 10%;
+}
+
+@keyframes intro {
+    0%{
+        transform: translate(-300px,0px);
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
+}
+@keyframes description {
+    0%{
+        transform: translate(300px,0px);
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
+}
+@keyframes exploreBtn {
+    0%{
+        transform: translate(0px,50px);
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
 }
 
 .main-intro{
@@ -146,6 +170,7 @@ header{
     justify-content: center;
     color: #343131;
     font: normal 400 60pt "Anton SC", sans-serif;
+    animation: intro 2s;
 }
 
 .short-description{
@@ -156,6 +181,7 @@ header{
     font: normal 400 25pt "Sour Gummy", sans-serif;
     font-variation-settings:"wdth" 100;
     color: #343131;
+    animation: description 1s;
 }
 
 .short-description-button{
@@ -163,6 +189,7 @@ header{
     background-color: rgb(250, 193, 47);
     border-radius: 10%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation: exploreBtn 2s;
 }
 
 .short-description-button:hover{
